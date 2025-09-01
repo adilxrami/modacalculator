@@ -1,0 +1,31 @@
+/* Custom styles for Home component */
+@import "tailwindcss";
+
+.home-container {
+  @apply min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-900 px-6;
+}
+
+.home-title {
+  @apply text-5xl font-extrabold mb-6 text-gray-900 leading-tight text-center;
+}
+
+.home-title span {
+  @apply text-green-600;
+}
+
+.home-description {
+  @apply max-w-2xl mb-10 text-lg text-gray-700 leading-relaxed text-center;
+}
+
+.home-button-primary {
+  @apply bg-green-600 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105;
+}
+
+.home-button-secondary {
+  @apply bg-white border border-gray-300 text-gray-800 px-10 py-4 rounded-full text-lg font-medium shadow transition-all duration-300 hover:bg-gray-50 hover:border-gray-400 hover:scale-105;
+}
+
+/* Updated color to green */
+.tailwind-test {
+  @apply bg-green-500 text-white p-4;
+}
