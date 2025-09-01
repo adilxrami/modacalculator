@@ -1,27 +1,21 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth"; // For authentication
-import { getFirestore } from "firebase/firestore"; // <-- Add this for Firestore
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDGGdAmxzFrWb1aDO0lydpGNm6CU9s2-rk",
-  authDomain: "luna-1-2.firebaseapp.com",
-  projectId: "luna-1-2",
-  storageBucket: "luna-1-2.firebasestorage.app",
-  messagingSenderId: "12626519120",
-  appId: "1:12626519120:web:1b91f21d5d4c5d2c811d55",
-  measurementId: "G-3JNQSXG7E4"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Initialize Firebase services
-export const auth = getAuth(app);        // Authentication
-export const db = getFirestore(app);     // Firestore database
-
-// (Optional) Export app and analytics if needed elsewhere
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 export { app, analytics };
